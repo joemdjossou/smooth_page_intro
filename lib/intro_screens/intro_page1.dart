@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class IntroPage1 extends StatelessWidget {
   const IntroPage1({super.key});
@@ -6,9 +7,8 @@ class IntroPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[200],
-      child: const Center(
-        child: Text('Page 1'),
+      child: Center(
+        child: Lottie.asset('assets/lottie/connect.json'),
       ),
     );
   }
