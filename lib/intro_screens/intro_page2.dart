@@ -7,8 +7,8 @@ class IntroPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.pink[100],
-      child: const Center(
-        child: Text('Page 2'),
+      child: Center(
+        child: Image.asset('assets/images/global_network.png'),
       ),
     );
   }
