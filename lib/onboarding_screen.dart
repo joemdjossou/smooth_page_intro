@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:smooth_page_intro/intro_screens/intro_pag3.dart';
-import 'package:smooth_page_intro/intro_screens/intro_page1.dart';
-import 'package:smooth_page_intro/intro_screens/intro_page2.dart';
-import 'package:smooth_page_intro/intro_screens/intro_page4.dart';
+import 'package:smooth_page_intro/intro_screens/intro_page.dart';
 import 'package:smooth_page_intro/pages/home_page.dart';
+import 'package:smooth_page_intro/themes/colors.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -32,17 +30,33 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 isLastPage = (index == 3);
               });
             },
-            children: const [
-              IntroPage1(),
-              IntroPage2(),
-              IntroPage3(),
-              IntroPage4(),
+            children: [
+              IntroPage(
+                lottieAsset: 'assets/lottie/connect.json',
+                text: 'Welcome to ChatBee! Get ready to connect with like-minded individuals!',
+                color: brightBlue,
+              ),
+              IntroPage(
+                lottieAsset: 'assets/lottie/girl_connect.json',
+                text: 'Let\'s kickstart your journey to meaningful connections!',
+                color: brightRed,
+              ),
+              IntroPage(
+                lottieAsset: 'assets/lottie/chatBOT.json',
+                text: 'Let\'s dive in and explore the power of connection together! Let\'s make every chat count!',
+                color: brightGreen,
+              ),
+              IntroPage(
+                lottieAsset: 'assets/lottie/allhuman.json',
+                text: 'Let\'s make magic happen, one chat at a time!!!',
+                color: brightOrange,
+              ),
             ],
           ),
 
           //dot controller
           Container(
-            alignment: const Alignment(0, 0.75),
+            alignment: const Alignment(0, 0.85),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
